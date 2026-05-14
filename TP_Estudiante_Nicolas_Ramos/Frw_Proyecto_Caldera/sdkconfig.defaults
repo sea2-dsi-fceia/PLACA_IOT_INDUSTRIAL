@@ -1,0 +1,5 @@
+# Sin consola en UART: el firmware instala UART0 solo para setpoint (2 dígitos).
+# Tras el primer build, si ya existe sdkconfig, ejecutar "Full clean" o borrar sdkconfig
+# para que se apliquen estos valores, o configurar en menuconfig:
+# Component config → ESP System Settings → Channel for console output → None
+CONFIG_ESP_CONSOLE_NONE=y
