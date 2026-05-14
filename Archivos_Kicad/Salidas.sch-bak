@@ -1,0 +1,1285 @@
+EESchema Schematic File Version 4
+LIBS:PLC_ESP32-cache
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 6
+Title "PLC_ESP32"
+Date "2021-08-24"
+Rev ""
+Comp "Zuliani,Agustin"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Relay:SANYOU_SRD_Form_C K1
+U 1 1 61458E4C
+P 2300 1250
+AR Path="/61294493/61458E4C" Ref="K1"  Part="1" 
+AR Path="/615E1DF0/61458E4C" Ref="K?"  Part="1" 
+F 0 "K1" H 2800 1300 50  0000 L CNN
+F 1 "SANYOU_SRD_Form_C" V 2750 950 50  0000 L CNN
+F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 2750 1200 50  0001 L CNN
+F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 2300 1250 50  0001 C CNN
+	1    2300 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Isolator:PC817 U4
+U 1 1 6145B61E
+P 1100 1800
+AR Path="/61294493/6145B61E" Ref="U4"  Part="1" 
+AR Path="/615E1DF0/6145B61E" Ref="U?"  Part="1" 
+F 0 "U4" H 1100 2125 50  0000 C CNN
+F 1 "PC817" H 1100 2034 50  0000 C CNN
+F 2 "Package_DIP:DIP-4_W7.62mm_LongPads" H 900 1600 50  0001 L CIN
+F 3 "http://www.soselectronic.cz/a_info/resource/d/pc817.pdf" H 1100 1800 50  0001 L CNN
+	1    1100 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R13
+U 1 1 6145E3DC
+P 1600 1900
+AR Path="/61294493/6145E3DC" Ref="R13"  Part="1" 
+AR Path="/615E1DF0/6145E3DC" Ref="R?"  Part="1" 
+F 0 "R13" V 1807 1900 50  0000 C CNN
+F 1 "2K" V 1716 1900 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 1530 1900 50  0001 C CNN
+F 3 "~" H 1600 1900 50  0001 C CNN
+	1    1600 1900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1750 1900 1800 1900
+Wire Wire Line
+	1400 1900 1450 1900
+$Comp
+L Diode:1N4007 D8
+U 1 1 61460A99
+P 1750 1250
+AR Path="/61294493/61460A99" Ref="D8"  Part="1" 
+AR Path="/615E1DF0/61460A99" Ref="D?"  Part="1" 
+F 0 "D8" V 1650 1300 50  0000 L CNN
+F 1 "1N4007" H 1600 1100 50  0000 L CNN
+F 2 "Diode_SMD:D_SMA" H 1750 1075 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 1750 1250 50  0001 C CNN
+	1    1750 1250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1750 1100 1750 900 
+Wire Wire Line
+	1750 900  2100 900 
+Wire Wire Line
+	2100 900  2100 950 
+Wire Wire Line
+	1750 1400 1750 1600
+Wire Wire Line
+	1750 1600 2100 1600
+Wire Wire Line
+	2100 1600 2100 1550
+Wire Wire Line
+	2100 1700 2100 1600
+Connection ~ 2100 1600
+$Comp
+L power:+5V #PWR029
+U 1 1 61476B7E
+P 2100 800
+AR Path="/61294493/61476B7E" Ref="#PWR029"  Part="1" 
+AR Path="/615E1DF0/61476B7E" Ref="#PWR?"  Part="1" 
+F 0 "#PWR029" H 2100 650 50  0001 C CNN
+F 1 "+5V" H 2115 973 50  0000 C CNN
+F 2 "" H 2100 800 50  0001 C CNN
+F 3 "" H 2100 800 50  0001 C CNN
+	1    2100 800 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 800  2100 900 
+Connection ~ 2100 900 
+$Comp
+L power:+5V #PWR027
+U 1 1 6147729A
+P 1450 1600
+AR Path="/61294493/6147729A" Ref="#PWR027"  Part="1" 
+AR Path="/615E1DF0/6147729A" Ref="#PWR?"  Part="1" 
+F 0 "#PWR027" H 1450 1450 50  0001 C CNN
+F 1 "+5V" H 1465 1773 50  0000 C CNN
+F 2 "" H 1450 1600 50  0001 C CNN
+F 3 "" H 1450 1600 50  0001 C CNN
+	1    1450 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1450 1600 1450 1700
+Wire Wire Line
+	1450 1700 1400 1700
+Wire Wire Line
+	750  1700 800  1700
+$Comp
+L Device:R R11
+U 1 1 61478065
+P 700 2100
+AR Path="/61294493/61478065" Ref="R11"  Part="1" 
+AR Path="/615E1DF0/61478065" Ref="R?"  Part="1" 
+F 0 "R11" H 770 2146 50  0000 L CNN
+F 1 "45/ 1/8W (5%)" H 770 2055 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 630 2100 50  0001 C CNN
+F 3 "~" H 700 2100 50  0001 C CNN
+	1    700  2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	700  1950 700  1900
+Wire Wire Line
+	700  1900 800  1900
+$Comp
+L Device:LED D6
+U 1 1 61478B96
+P 700 2450
+AR Path="/61294493/61478B96" Ref="D6"  Part="1" 
+AR Path="/615E1DF0/61478B96" Ref="D?"  Part="1" 
+F 0 "D6" V 739 2333 50  0000 R CNN
+F 1 "Q0.0" V 648 2333 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 700 2450 50  0001 C CNN
+F 3 "~" H 700 2450 50  0001 C CNN
+	1    700  2450
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	700  2300 700  2250
+$Comp
+L power:GND #PWR025
+U 1 1 614796FE
+P 700 2650
+AR Path="/61294493/614796FE" Ref="#PWR025"  Part="1" 
+AR Path="/615E1DF0/614796FE" Ref="#PWR?"  Part="1" 
+F 0 "#PWR025" H 700 2400 50  0001 C CNN
+F 1 "GND" H 705 2477 50  0000 C CNN
+F 2 "" H 700 2650 50  0001 C CNN
+F 3 "" H 700 2650 50  0001 C CNN
+	1    700  2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	700  2650 700  2600
+$Comp
+L power:GND #PWR030
+U 1 1 61479FEB
+P 2100 2150
+AR Path="/61294493/61479FEB" Ref="#PWR030"  Part="1" 
+AR Path="/615E1DF0/61479FEB" Ref="#PWR?"  Part="1" 
+F 0 "#PWR030" H 2100 1900 50  0001 C CNN
+F 1 "GND" H 2105 1977 50  0000 C CNN
+F 2 "" H 2100 2150 50  0001 C CNN
+F 3 "" H 2100 2150 50  0001 C CNN
+	1    2100 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 2150 2100 2100
+Text Label 2500 1700 0    50   ~ 0
+COM_RELE1
+Wire Wire Line
+	2500 1700 2500 1550
+Text Label 2600 900  1    50   ~ 0
+Q0.0_NA
+Wire Wire Line
+	2600 900  2600 950 
+NoConn ~ 2400 950 
+$Comp
+L Relay:SANYOU_SRD_Form_C K2
+U 1 1 6147F090
+P 2400 3550
+AR Path="/61294493/6147F090" Ref="K2"  Part="1" 
+AR Path="/615E1DF0/6147F090" Ref="K?"  Part="1" 
+F 0 "K2" H 2900 3600 50  0000 L CNN
+F 1 "SANYOU_SRD_Form_C" V 2850 3250 50  0000 L CNN
+F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 2850 3500 50  0001 L CNN
+F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 2400 3550 50  0001 C CNN
+	1    2400 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Isolator:PC817 U5
+U 1 1 6147F09A
+P 1200 4100
+AR Path="/61294493/6147F09A" Ref="U5"  Part="1" 
+AR Path="/615E1DF0/6147F09A" Ref="U?"  Part="1" 
+F 0 "U5" H 1200 4425 50  0000 C CNN
+F 1 "PC817" H 1200 4334 50  0000 C CNN
+F 2 "Package_DIP:DIP-4_W7.62mm_LongPads" H 1000 3900 50  0001 L CIN
+F 3 "http://www.soselectronic.cz/a_info/resource/d/pc817.pdf" H 1200 4100 50  0001 L CNN
+	1    1200 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R14
+U 1 1 6147F0AE
+P 1700 4200
+AR Path="/61294493/6147F0AE" Ref="R14"  Part="1" 
+AR Path="/615E1DF0/6147F0AE" Ref="R?"  Part="1" 
+F 0 "R14" V 1907 4200 50  0000 C CNN
+F 1 "2K" V 1816 4200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 1630 4200 50  0001 C CNN
+F 3 "~" H 1700 4200 50  0001 C CNN
+	1    1700 4200
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1850 4200 1900 4200
+Wire Wire Line
+	1500 4200 1550 4200
+$Comp
+L Diode:1N4007 D9
+U 1 1 6147F0BA
+P 1850 3550
+AR Path="/61294493/6147F0BA" Ref="D9"  Part="1" 
+AR Path="/615E1DF0/6147F0BA" Ref="D?"  Part="1" 
+F 0 "D9" V 1750 3600 50  0000 L CNN
+F 1 "1N4007" H 1700 3400 50  0000 L CNN
+F 2 "Diode_SMD:D_SMA" H 1850 3375 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 1850 3550 50  0001 C CNN
+	1    1850 3550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1850 3400 1850 3200
+Wire Wire Line
+	1850 3200 2200 3200
+Wire Wire Line
+	2200 3200 2200 3250
+Wire Wire Line
+	1850 3700 1850 3900
+Wire Wire Line
+	1850 3900 2200 3900
+Wire Wire Line
+	2200 3900 2200 3850
+Wire Wire Line
+	2200 4000 2200 3900
+Connection ~ 2200 3900
+$Comp
+L power:+5V #PWR031
+U 1 1 6147F0CC
+P 2200 3100
+AR Path="/61294493/6147F0CC" Ref="#PWR031"  Part="1" 
+AR Path="/615E1DF0/6147F0CC" Ref="#PWR?"  Part="1" 
+F 0 "#PWR031" H 2200 2950 50  0001 C CNN
+F 1 "+5V" H 2215 3273 50  0000 C CNN
+F 2 "" H 2200 3100 50  0001 C CNN
+F 3 "" H 2200 3100 50  0001 C CNN
+	1    2200 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 3100 2200 3200
+Connection ~ 2200 3200
+$Comp
+L power:+5V #PWR028
+U 1 1 6147F0D8
+P 1550 3900
+AR Path="/61294493/6147F0D8" Ref="#PWR028"  Part="1" 
+AR Path="/615E1DF0/6147F0D8" Ref="#PWR?"  Part="1" 
+F 0 "#PWR028" H 1550 3750 50  0001 C CNN
+F 1 "+5V" H 1565 4073 50  0000 C CNN
+F 2 "" H 1550 3900 50  0001 C CNN
+F 3 "" H 1550 3900 50  0001 C CNN
+	1    1550 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 3900 1550 4000
+Wire Wire Line
+	1550 4000 1500 4000
+Wire Wire Line
+	750  4000 900  4000
+$Comp
+L Device:R R12
+U 1 1 6147F0E6
+P 800 4400
+AR Path="/61294493/6147F0E6" Ref="R12"  Part="1" 
+AR Path="/615E1DF0/6147F0E6" Ref="R?"  Part="1" 
+F 0 "R12" H 870 4446 50  0000 L CNN
+F 1 "45/ 1/8W (5%)" H 870 4355 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 730 4400 50  0001 C CNN
+F 3 "~" H 800 4400 50  0001 C CNN
+	1    800  4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	800  4250 800  4200
+Wire Wire Line
+	800  4200 900  4200
+$Comp
+L Device:LED D7
+U 1 1 6147F0F2
+P 800 4750
+AR Path="/61294493/6147F0F2" Ref="D7"  Part="1" 
+AR Path="/615E1DF0/6147F0F2" Ref="D?"  Part="1" 
+F 0 "D7" V 839 4633 50  0000 R CNN
+F 1 "Q0.1" V 748 4633 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 800 4750 50  0001 C CNN
+F 3 "~" H 800 4750 50  0001 C CNN
+	1    800  4750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	800  4600 800  4550
+$Comp
+L power:GND #PWR026
+U 1 1 6147F0FD
+P 800 4950
+AR Path="/61294493/6147F0FD" Ref="#PWR026"  Part="1" 
+AR Path="/615E1DF0/6147F0FD" Ref="#PWR?"  Part="1" 
+F 0 "#PWR026" H 800 4700 50  0001 C CNN
+F 1 "GND" H 805 4777 50  0000 C CNN
+F 2 "" H 800 4950 50  0001 C CNN
+F 3 "" H 800 4950 50  0001 C CNN
+	1    800  4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	800  4950 800  4900
+$Comp
+L power:GND #PWR032
+U 1 1 6147F108
+P 2200 4450
+AR Path="/61294493/6147F108" Ref="#PWR032"  Part="1" 
+AR Path="/615E1DF0/6147F108" Ref="#PWR?"  Part="1" 
+F 0 "#PWR032" H 2200 4200 50  0001 C CNN
+F 1 "GND" H 2205 4277 50  0000 C CNN
+F 2 "" H 2200 4450 50  0001 C CNN
+F 3 "" H 2200 4450 50  0001 C CNN
+	1    2200 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 4450 2200 4400
+Text Label 2650 4000 0    50   ~ 0
+COM_RELE2
+Wire Wire Line
+	2650 4000 2600 4000
+Wire Wire Line
+	2600 4000 2600 3850
+Text Label 2700 3200 1    50   ~ 0
+Q0.1_NA
+Wire Wire Line
+	2700 3200 2700 3250
+NoConn ~ 2500 3250
+$Comp
+L Relay:SANYOU_SRD_Form_C K3
+U 1 1 6148BC3C
+P 4750 1250
+AR Path="/61294493/6148BC3C" Ref="K3"  Part="1" 
+AR Path="/615E1DF0/6148BC3C" Ref="K?"  Part="1" 
+F 0 "K3" H 5250 1300 50  0000 L CNN
+F 1 "SANYOU_SRD_Form_C" V 5200 950 50  0000 L CNN
+F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 5200 1200 50  0001 L CNN
+F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 4750 1250 50  0001 C CNN
+	1    4750 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Isolator:PC817 U6
+U 1 1 6148BC46
+P 3550 1800
+AR Path="/61294493/6148BC46" Ref="U6"  Part="1" 
+AR Path="/615E1DF0/6148BC46" Ref="U?"  Part="1" 
+F 0 "U6" H 3550 2125 50  0000 C CNN
+F 1 "PC817" H 3550 2034 50  0000 C CNN
+F 2 "Package_DIP:DIP-4_W7.62mm_LongPads" H 3350 1600 50  0001 L CIN
+F 3 "http://www.soselectronic.cz/a_info/resource/d/pc817.pdf" H 3550 1800 50  0001 L CNN
+	1    3550 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R16
+U 1 1 6148BC5A
+P 4050 1900
+AR Path="/61294493/6148BC5A" Ref="R16"  Part="1" 
+AR Path="/615E1DF0/6148BC5A" Ref="R?"  Part="1" 
+F 0 "R16" V 4257 1900 50  0000 C CNN
+F 1 "2K" V 4166 1900 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3980 1900 50  0001 C CNN
+F 3 "~" H 4050 1900 50  0001 C CNN
+	1    4050 1900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4200 1900 4250 1900
+Wire Wire Line
+	3850 1900 3900 1900
+$Comp
+L Diode:1N4007 D11
+U 1 1 6148BC66
+P 4200 1250
+AR Path="/61294493/6148BC66" Ref="D11"  Part="1" 
+AR Path="/615E1DF0/6148BC66" Ref="D?"  Part="1" 
+F 0 "D11" V 4100 1300 50  0000 L CNN
+F 1 "1N4007" H 4050 1100 50  0000 L CNN
+F 2 "Diode_SMD:D_SMA" H 4200 1075 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 4200 1250 50  0001 C CNN
+	1    4200 1250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4200 1100 4200 900 
+Wire Wire Line
+	4200 900  4550 900 
+Wire Wire Line
+	4550 900  4550 950 
+Wire Wire Line
+	4200 1400 4200 1600
+Wire Wire Line
+	4200 1600 4550 1600
+Wire Wire Line
+	4550 1600 4550 1550
+Wire Wire Line
+	4550 1700 4550 1600
+Connection ~ 4550 1600
+$Comp
+L power:+5V #PWR035
+U 1 1 6148BC78
+P 4550 800
+AR Path="/61294493/6148BC78" Ref="#PWR035"  Part="1" 
+AR Path="/615E1DF0/6148BC78" Ref="#PWR?"  Part="1" 
+F 0 "#PWR035" H 4550 650 50  0001 C CNN
+F 1 "+5V" H 4565 973 50  0000 C CNN
+F 2 "" H 4550 800 50  0001 C CNN
+F 3 "" H 4550 800 50  0001 C CNN
+	1    4550 800 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 800  4550 900 
+Connection ~ 4550 900 
+$Comp
+L power:+5V #PWR034
+U 1 1 6148BC84
+P 3900 1600
+AR Path="/61294493/6148BC84" Ref="#PWR034"  Part="1" 
+AR Path="/615E1DF0/6148BC84" Ref="#PWR?"  Part="1" 
+F 0 "#PWR034" H 3900 1450 50  0001 C CNN
+F 1 "+5V" H 3915 1773 50  0000 C CNN
+F 2 "" H 3900 1600 50  0001 C CNN
+F 3 "" H 3900 1600 50  0001 C CNN
+	1    3900 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 1600 3900 1700
+Wire Wire Line
+	3900 1700 3850 1700
+Wire Wire Line
+	3200 1700 3250 1700
+$Comp
+L Device:R R15
+U 1 1 6148BC92
+P 3150 2100
+AR Path="/61294493/6148BC92" Ref="R15"  Part="1" 
+AR Path="/615E1DF0/6148BC92" Ref="R?"  Part="1" 
+F 0 "R15" H 3220 2146 50  0000 L CNN
+F 1 "45/ 1/8W (5%)" H 3220 2055 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3080 2100 50  0001 C CNN
+F 3 "~" H 3150 2100 50  0001 C CNN
+	1    3150 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 1950 3150 1900
+Wire Wire Line
+	3150 1900 3250 1900
+$Comp
+L Device:LED D10
+U 1 1 6148BC9E
+P 3150 2450
+AR Path="/61294493/6148BC9E" Ref="D10"  Part="1" 
+AR Path="/615E1DF0/6148BC9E" Ref="D?"  Part="1" 
+F 0 "D10" V 3189 2333 50  0000 R CNN
+F 1 "Q0.2" V 3098 2333 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 3150 2450 50  0001 C CNN
+F 3 "~" H 3150 2450 50  0001 C CNN
+	1    3150 2450
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3150 2300 3150 2250
+$Comp
+L power:GND #PWR033
+U 1 1 6148BCA9
+P 3150 2650
+AR Path="/61294493/6148BCA9" Ref="#PWR033"  Part="1" 
+AR Path="/615E1DF0/6148BCA9" Ref="#PWR?"  Part="1" 
+F 0 "#PWR033" H 3150 2400 50  0001 C CNN
+F 1 "GND" H 3155 2477 50  0000 C CNN
+F 2 "" H 3150 2650 50  0001 C CNN
+F 3 "" H 3150 2650 50  0001 C CNN
+	1    3150 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 2650 3150 2600
+$Comp
+L power:GND #PWR036
+U 1 1 6148BCB4
+P 4550 2150
+AR Path="/61294493/6148BCB4" Ref="#PWR036"  Part="1" 
+AR Path="/615E1DF0/6148BCB4" Ref="#PWR?"  Part="1" 
+F 0 "#PWR036" H 4550 1900 50  0001 C CNN
+F 1 "GND" H 4555 1977 50  0000 C CNN
+F 2 "" H 4550 2150 50  0001 C CNN
+F 3 "" H 4550 2150 50  0001 C CNN
+	1    4550 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 2150 4550 2100
+Text Label 5000 1700 0    50   ~ 0
+COM_RELE3
+Wire Wire Line
+	5000 1700 4950 1700
+Wire Wire Line
+	4950 1700 4950 1550
+Text Label 5050 900  1    50   ~ 0
+Q0.2_NA
+Wire Wire Line
+	5050 900  5050 950 
+NoConn ~ 4850 950 
+$Comp
+L Relay_SolidState:MOC3021M U8
+U 1 1 6149FC90
+P 6100 2500
+AR Path="/61294493/6149FC90" Ref="U8"  Part="1" 
+AR Path="/615E1DF0/6149FC90" Ref="U?"  Part="1" 
+F 0 "U8" H 6100 2825 50  0000 C CNN
+F 1 "MOC3021M" H 6100 2734 50  0000 C CNN
+F 2 "Package_DIP:DIP-6_W7.62mm_LongPads" H 5900 2300 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/MO/MOC3020M.pdf" H 6075 2500 50  0001 L CNN
+	1    6100 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Triac_Thyristor:BT136-500 Q7
+U 1 1 614A1595
+P 6900 2550
+AR Path="/61294493/614A1595" Ref="Q7"  Part="1" 
+AR Path="/615E1DF0/614A1595" Ref="Q?"  Part="1" 
+F 0 "Q7" H 7028 2596 50  0000 L CNN
+F 1 "BT136-500" H 7028 2505 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 7100 2475 50  0001 L CIN
+F 3 "http://www.micropik.com/PDF/BT136-600.pdf" H 6900 2550 50  0001 L CNN
+	1    6900 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R21
+U 1 1 614A1B98
+P 6650 2400
+AR Path="/61294493/614A1B98" Ref="R21"  Part="1" 
+AR Path="/615E1DF0/614A1B98" Ref="R?"  Part="1" 
+F 0 "R21" V 6443 2400 50  0000 C CNN
+F 1 "33K" V 6534 2400 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6580 2400 50  0001 C CNN
+F 3 "~" H 6650 2400 50  0001 C CNN
+	1    6650 2400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6500 2400 6400 2400
+Wire Wire Line
+	6800 2400 6900 2400
+Wire Wire Line
+	6750 2650 6600 2650
+Wire Wire Line
+	6600 2650 6600 2600
+Wire Wire Line
+	6600 2600 6400 2600
+Wire Wire Line
+	5650 2400 5800 2400
+$Comp
+L Device:R R18
+U 1 1 614AB483
+P 5750 2800
+AR Path="/61294493/614AB483" Ref="R18"  Part="1" 
+AR Path="/615E1DF0/614AB483" Ref="R?"  Part="1" 
+F 0 "R18" H 5820 2846 50  0000 L CNN
+F 1 "45/ 1/8W (5%)" H 5820 2755 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5680 2800 50  0001 C CNN
+F 3 "~" H 5750 2800 50  0001 C CNN
+	1    5750 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D13
+U 1 1 614AB48D
+P 5750 3150
+AR Path="/61294493/614AB48D" Ref="D13"  Part="1" 
+AR Path="/615E1DF0/614AB48D" Ref="D?"  Part="1" 
+F 0 "D13" V 5789 3033 50  0000 R CNN
+F 1 "Q0.3" V 5698 3033 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 5750 3150 50  0001 C CNN
+F 3 "~" H 5750 3150 50  0001 C CNN
+	1    5750 3150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5750 3000 5750 2950
+$Comp
+L power:GND #PWR038
+U 1 1 614AB498
+P 5750 3350
+AR Path="/61294493/614AB498" Ref="#PWR038"  Part="1" 
+AR Path="/615E1DF0/614AB498" Ref="#PWR?"  Part="1" 
+F 0 "#PWR038" H 5750 3100 50  0001 C CNN
+F 1 "GND" H 5755 3177 50  0000 C CNN
+F 2 "" H 5750 3350 50  0001 C CNN
+F 3 "" H 5750 3350 50  0001 C CNN
+	1    5750 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 3350 5750 3300
+Wire Wire Line
+	5750 2650 5750 2600
+Wire Wire Line
+	5750 2600 5800 2600
+Text Label 7400 2800 2    50   ~ 0
+COM_TRIAC
+Wire Wire Line
+	7400 2800 6900 2800
+Wire Wire Line
+	6900 2800 6900 2700
+Text Label 7400 2400 2    50   ~ 0
+Q0.3_NA
+Wire Wire Line
+	7400 2400 6900 2400
+Connection ~ 6900 2400
+$Comp
+L Relay_SolidState:MOC3021M U9
+U 1 1 614B70F8
+P 6100 3900
+AR Path="/61294493/614B70F8" Ref="U9"  Part="1" 
+AR Path="/615E1DF0/614B70F8" Ref="U?"  Part="1" 
+F 0 "U9" H 6100 4225 50  0000 C CNN
+F 1 "MOC3021M" H 6100 4134 50  0000 C CNN
+F 2 "Package_DIP:DIP-6_W7.62mm_LongPads" H 5900 3700 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/MO/MOC3020M.pdf" H 6075 3900 50  0001 L CNN
+	1    6100 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Triac_Thyristor:BT136-500 Q8
+U 1 1 614B7102
+P 6900 3950
+AR Path="/61294493/614B7102" Ref="Q8"  Part="1" 
+AR Path="/615E1DF0/614B7102" Ref="Q?"  Part="1" 
+F 0 "Q8" H 7028 3996 50  0000 L CNN
+F 1 "BT136-500" H 7028 3905 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 7100 3875 50  0001 L CIN
+F 3 "http://www.micropik.com/PDF/BT136-600.pdf" H 6900 3950 50  0001 L CNN
+	1    6900 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R22
+U 1 1 614B710C
+P 6650 3800
+AR Path="/61294493/614B710C" Ref="R22"  Part="1" 
+AR Path="/615E1DF0/614B710C" Ref="R?"  Part="1" 
+F 0 "R22" V 6443 3800 50  0000 C CNN
+F 1 "33K" V 6534 3800 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6580 3800 50  0001 C CNN
+F 3 "~" H 6650 3800 50  0001 C CNN
+	1    6650 3800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6500 3800 6400 3800
+Wire Wire Line
+	6800 3800 6900 3800
+Wire Wire Line
+	6750 4050 6600 4050
+Wire Wire Line
+	6600 4050 6600 4000
+Wire Wire Line
+	6600 4000 6400 4000
+Wire Wire Line
+	5650 3800 5800 3800
+$Comp
+L Device:R R19
+U 1 1 614B711D
+P 5750 4200
+AR Path="/61294493/614B711D" Ref="R19"  Part="1" 
+AR Path="/615E1DF0/614B711D" Ref="R?"  Part="1" 
+F 0 "R19" H 5820 4246 50  0000 L CNN
+F 1 "45/ 1/8W (5%)" H 5820 4155 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5680 4200 50  0001 C CNN
+F 3 "~" H 5750 4200 50  0001 C CNN
+	1    5750 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D14
+U 1 1 614B7127
+P 5750 4550
+AR Path="/61294493/614B7127" Ref="D14"  Part="1" 
+AR Path="/615E1DF0/614B7127" Ref="D?"  Part="1" 
+F 0 "D14" V 5789 4433 50  0000 R CNN
+F 1 "Q0.4" V 5698 4433 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 5750 4550 50  0001 C CNN
+F 3 "~" H 5750 4550 50  0001 C CNN
+	1    5750 4550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5750 4400 5750 4350
+$Comp
+L power:GND #PWR039
+U 1 1 614B7132
+P 5750 4750
+AR Path="/61294493/614B7132" Ref="#PWR039"  Part="1" 
+AR Path="/615E1DF0/614B7132" Ref="#PWR?"  Part="1" 
+F 0 "#PWR039" H 5750 4500 50  0001 C CNN
+F 1 "GND" H 5755 4577 50  0000 C CNN
+F 2 "" H 5750 4750 50  0001 C CNN
+F 3 "" H 5750 4750 50  0001 C CNN
+	1    5750 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 4750 5750 4700
+Wire Wire Line
+	5750 4050 5750 4000
+Wire Wire Line
+	5750 4000 5800 4000
+Text Label 7400 4200 2    50   ~ 0
+COM_TRIAC
+Wire Wire Line
+	7400 4200 6900 4200
+Wire Wire Line
+	6900 4200 6900 4100
+Text Label 7400 3800 2    50   ~ 0
+Q0.4_NA
+Wire Wire Line
+	7400 3800 6900 3800
+Connection ~ 6900 3800
+$Comp
+L Relay_SolidState:MOC3021M U10
+U 1 1 614BE1C7
+P 8150 2500
+AR Path="/61294493/614BE1C7" Ref="U10"  Part="1" 
+AR Path="/615E1DF0/614BE1C7" Ref="U?"  Part="1" 
+F 0 "U10" H 8150 2825 50  0000 C CNN
+F 1 "MOC3021M" H 8150 2734 50  0000 C CNN
+F 2 "Package_DIP:DIP-6_W7.62mm_LongPads" H 7950 2300 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/MO/MOC3020M.pdf" H 8125 2500 50  0001 L CNN
+	1    8150 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Triac_Thyristor:BT136-500 Q9
+U 1 1 614BE1D1
+P 8950 2550
+AR Path="/61294493/614BE1D1" Ref="Q9"  Part="1" 
+AR Path="/615E1DF0/614BE1D1" Ref="Q?"  Part="1" 
+F 0 "Q9" H 9078 2596 50  0000 L CNN
+F 1 "BT136-500" H 9078 2505 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 9150 2475 50  0001 L CIN
+F 3 "http://www.micropik.com/PDF/BT136-600.pdf" H 8950 2550 50  0001 L CNN
+	1    8950 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R25
+U 1 1 614BE1DB
+P 8700 2400
+AR Path="/61294493/614BE1DB" Ref="R25"  Part="1" 
+AR Path="/615E1DF0/614BE1DB" Ref="R?"  Part="1" 
+F 0 "R25" V 8493 2400 50  0000 C CNN
+F 1 "33K" V 8584 2400 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 8630 2400 50  0001 C CNN
+F 3 "~" H 8700 2400 50  0001 C CNN
+	1    8700 2400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8550 2400 8450 2400
+Wire Wire Line
+	8850 2400 8950 2400
+Wire Wire Line
+	8800 2650 8650 2650
+Wire Wire Line
+	8650 2650 8650 2600
+Wire Wire Line
+	8650 2600 8450 2600
+Wire Wire Line
+	7700 2400 7850 2400
+$Comp
+L Device:R R23
+U 1 1 614BE1EC
+P 7800 2800
+AR Path="/61294493/614BE1EC" Ref="R23"  Part="1" 
+AR Path="/615E1DF0/614BE1EC" Ref="R?"  Part="1" 
+F 0 "R23" H 7870 2846 50  0000 L CNN
+F 1 "45/ 1/8W (5%)" H 7870 2755 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 7730 2800 50  0001 C CNN
+F 3 "~" H 7800 2800 50  0001 C CNN
+	1    7800 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D15
+U 1 1 614BE1F6
+P 7800 3150
+AR Path="/61294493/614BE1F6" Ref="D15"  Part="1" 
+AR Path="/615E1DF0/614BE1F6" Ref="D?"  Part="1" 
+F 0 "D15" V 7839 3033 50  0000 R CNN
+F 1 "Q0.5" V 7748 3033 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 7800 3150 50  0001 C CNN
+F 3 "~" H 7800 3150 50  0001 C CNN
+	1    7800 3150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7800 3000 7800 2950
+$Comp
+L power:GND #PWR040
+U 1 1 614BE201
+P 7800 3350
+AR Path="/61294493/614BE201" Ref="#PWR040"  Part="1" 
+AR Path="/615E1DF0/614BE201" Ref="#PWR?"  Part="1" 
+F 0 "#PWR040" H 7800 3100 50  0001 C CNN
+F 1 "GND" H 7805 3177 50  0000 C CNN
+F 2 "" H 7800 3350 50  0001 C CNN
+F 3 "" H 7800 3350 50  0001 C CNN
+	1    7800 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7800 3350 7800 3300
+Wire Wire Line
+	7800 2650 7800 2600
+Wire Wire Line
+	7800 2600 7850 2600
+Text Label 9450 2800 2    50   ~ 0
+COM_TRIAC
+Wire Wire Line
+	9450 2800 8950 2800
+Wire Wire Line
+	8950 2800 8950 2700
+Wire Wire Line
+	9450 2400 8950 2400
+Connection ~ 8950 2400
+$Comp
+L Relay_SolidState:MOC3021M U11
+U 1 1 614BE214
+P 8150 3900
+AR Path="/61294493/614BE214" Ref="U11"  Part="1" 
+AR Path="/615E1DF0/614BE214" Ref="U?"  Part="1" 
+F 0 "U11" H 8150 4225 50  0000 C CNN
+F 1 "MOC3021M" H 8150 4134 50  0000 C CNN
+F 2 "Package_DIP:DIP-6_W7.62mm_LongPads" H 7950 3700 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/MO/MOC3020M.pdf" H 8125 3900 50  0001 L CNN
+	1    8150 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Triac_Thyristor:BT136-500 Q10
+U 1 1 614BE21E
+P 8950 3950
+AR Path="/61294493/614BE21E" Ref="Q10"  Part="1" 
+AR Path="/615E1DF0/614BE21E" Ref="Q?"  Part="1" 
+F 0 "Q10" H 9078 3996 50  0000 L CNN
+F 1 "BT136-500" H 9078 3905 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 9150 3875 50  0001 L CIN
+F 3 "http://www.micropik.com/PDF/BT136-600.pdf" H 8950 3950 50  0001 L CNN
+	1    8950 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R26
+U 1 1 614BE228
+P 8700 3800
+AR Path="/61294493/614BE228" Ref="R26"  Part="1" 
+AR Path="/615E1DF0/614BE228" Ref="R?"  Part="1" 
+F 0 "R26" V 8493 3800 50  0000 C CNN
+F 1 "33K" V 8584 3800 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 8630 3800 50  0001 C CNN
+F 3 "~" H 8700 3800 50  0001 C CNN
+	1    8700 3800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8550 3800 8450 3800
+Wire Wire Line
+	8850 3800 8950 3800
+Wire Wire Line
+	8800 4050 8650 4050
+Wire Wire Line
+	8650 4050 8650 4000
+Wire Wire Line
+	8650 4000 8450 4000
+Wire Wire Line
+	7700 3800 7850 3800
+$Comp
+L Device:R R24
+U 1 1 614BE239
+P 7800 4200
+AR Path="/61294493/614BE239" Ref="R24"  Part="1" 
+AR Path="/615E1DF0/614BE239" Ref="R?"  Part="1" 
+F 0 "R24" H 7870 4246 50  0000 L CNN
+F 1 "45/ 1/8W (5%)" H 7870 4155 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 7730 4200 50  0001 C CNN
+F 3 "~" H 7800 4200 50  0001 C CNN
+	1    7800 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D16
+U 1 1 614BE243
+P 7800 4550
+AR Path="/61294493/614BE243" Ref="D16"  Part="1" 
+AR Path="/615E1DF0/614BE243" Ref="D?"  Part="1" 
+F 0 "D16" V 7839 4433 50  0000 R CNN
+F 1 "Q0.6" V 7748 4433 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 7800 4550 50  0001 C CNN
+F 3 "~" H 7800 4550 50  0001 C CNN
+	1    7800 4550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7800 4400 7800 4350
+$Comp
+L power:GND #PWR041
+U 1 1 614BE24E
+P 7800 4750
+AR Path="/61294493/614BE24E" Ref="#PWR041"  Part="1" 
+AR Path="/615E1DF0/614BE24E" Ref="#PWR?"  Part="1" 
+F 0 "#PWR041" H 7800 4500 50  0001 C CNN
+F 1 "GND" H 7805 4577 50  0000 C CNN
+F 2 "" H 7800 4750 50  0001 C CNN
+F 3 "" H 7800 4750 50  0001 C CNN
+	1    7800 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7800 4750 7800 4700
+Wire Wire Line
+	7800 4050 7800 4000
+Wire Wire Line
+	7800 4000 7850 4000
+Text Label 9450 4200 2    50   ~ 0
+COM_TRIAC
+Wire Wire Line
+	9450 4200 8950 4200
+Wire Wire Line
+	8950 4200 8950 4100
+Text Label 9450 3800 2    50   ~ 0
+Q0.6_NA
+Wire Wire Line
+	9450 3800 8950 3800
+Connection ~ 8950 3800
+Text Label 9450 2400 2    50   ~ 0
+Q0.5_NA
+$Comp
+L Relay_SolidState:MOC3021M U7
+U 1 1 614D0251
+P 6100 950
+AR Path="/61294493/614D0251" Ref="U7"  Part="1" 
+AR Path="/615E1DF0/614D0251" Ref="U?"  Part="1" 
+F 0 "U7" H 6100 1275 50  0000 C CNN
+F 1 "MOC3021M" H 6100 1184 50  0000 C CNN
+F 2 "Package_DIP:DIP-6_W7.62mm_LongPads" H 5900 750 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/MO/MOC3020M.pdf" H 6075 950 50  0001 L CNN
+	1    6100 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Triac_Thyristor:BT136-500 Q6
+U 1 1 614D025B
+P 6900 1000
+AR Path="/61294493/614D025B" Ref="Q6"  Part="1" 
+AR Path="/615E1DF0/614D025B" Ref="Q?"  Part="1" 
+F 0 "Q6" H 7028 1046 50  0000 L CNN
+F 1 "BT136-500" H 7028 955 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 7100 925 50  0001 L CIN
+F 3 "http://www.micropik.com/PDF/BT136-600.pdf" H 6900 1000 50  0001 L CNN
+	1    6900 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R20
+U 1 1 614D0265
+P 6650 850
+AR Path="/61294493/614D0265" Ref="R20"  Part="1" 
+AR Path="/615E1DF0/614D0265" Ref="R?"  Part="1" 
+F 0 "R20" V 6443 850 50  0000 C CNN
+F 1 "33K" V 6534 850 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6580 850 50  0001 C CNN
+F 3 "~" H 6650 850 50  0001 C CNN
+	1    6650 850 
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6500 850  6400 850 
+Wire Wire Line
+	6800 850  6900 850 
+Wire Wire Line
+	6750 1100 6600 1100
+Wire Wire Line
+	6600 1100 6600 1050
+Wire Wire Line
+	6600 1050 6400 1050
+Wire Wire Line
+	5650 850  5800 850 
+$Comp
+L Device:R R17
+U 1 1 614D0276
+P 5750 1250
+AR Path="/61294493/614D0276" Ref="R17"  Part="1" 
+AR Path="/615E1DF0/614D0276" Ref="R?"  Part="1" 
+F 0 "R17" H 5820 1296 50  0000 L CNN
+F 1 "45/ 1/8W (5%)" H 5820 1205 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5680 1250 50  0001 C CNN
+F 3 "~" H 5750 1250 50  0001 C CNN
+	1    5750 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D12
+U 1 1 614D0280
+P 5750 1600
+AR Path="/61294493/614D0280" Ref="D12"  Part="1" 
+AR Path="/615E1DF0/614D0280" Ref="D?"  Part="1" 
+F 0 "D12" V 5789 1483 50  0000 R CNN
+F 1 "Q0.7" V 5698 1483 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 5750 1600 50  0001 C CNN
+F 3 "~" H 5750 1600 50  0001 C CNN
+	1    5750 1600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5750 1450 5750 1400
+$Comp
+L power:GND #PWR037
+U 1 1 614D028B
+P 5750 1800
+AR Path="/61294493/614D028B" Ref="#PWR037"  Part="1" 
+AR Path="/615E1DF0/614D028B" Ref="#PWR?"  Part="1" 
+F 0 "#PWR037" H 5750 1550 50  0001 C CNN
+F 1 "GND" H 5755 1627 50  0000 C CNN
+F 2 "" H 5750 1800 50  0001 C CNN
+F 3 "" H 5750 1800 50  0001 C CNN
+	1    5750 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 1800 5750 1750
+Wire Wire Line
+	5750 1100 5750 1050
+Wire Wire Line
+	5750 1050 5800 1050
+Text Label 7400 1250 2    50   ~ 0
+COM_TRIAC
+Wire Wire Line
+	7400 1250 6900 1250
+Wire Wire Line
+	6900 1250 6900 1150
+Text Label 7400 850  2    50   ~ 0
+Q0.7_NA
+Wire Wire Line
+	7400 850  6900 850 
+Connection ~ 6900 850 
+Wire Notes Line
+	500  5350 9750 5350
+Wire Notes Line
+	9750 5350 9750 500 
+Wire Notes Line
+	9750 500  500  500 
+Wire Notes Line
+	500  500  500  5350
+$Comp
+L Connector:Screw_Terminal_01x03 J2
+U 1 1 61575FA8
+P 1350 5850
+AR Path="/61294493/61575FA8" Ref="J2"  Part="1" 
+AR Path="/615E1DF0/61575FA8" Ref="J?"  Part="1" 
+F 0 "J2" H 1430 5892 50  0000 L CNN
+F 1 "Terminales Reles" H 1430 5801 50  0000 L CNN
+F 2 "BorneraTornillos:TerminalBlock_Phoenix_PT-1,5-3-5.0-H_1x03_P5.00mm_Horizontal" H 1350 5850 50  0001 C CNN
+F 3 "~" H 1350 5850 50  0001 C CNN
+	1    1350 5850
+	1    0    0    -1  
+$EndComp
+Text Label 700  5850 0    50   ~ 0
+Q0.0_NA
+Wire Wire Line
+	700  5950 1150 5950
+Text Label 700  5950 0    50   ~ 0
+COM_RELE1
+Wire Wire Line
+	700  5850 1150 5850
+$Comp
+L Connector:Screw_Terminal_01x03 J3
+U 1 1 61583CA4
+P 1350 6200
+AR Path="/61294493/61583CA4" Ref="J3"  Part="1" 
+AR Path="/615E1DF0/61583CA4" Ref="J?"  Part="1" 
+F 0 "J3" H 1430 6242 50  0000 L CNN
+F 1 "Terminales Reles" H 1430 6151 50  0000 L CNN
+F 2 "BorneraTornillos:TerminalBlock_Phoenix_PT-1,5-3-5.0-H_1x03_P5.00mm_Horizontal" H 1350 6200 50  0001 C CNN
+F 3 "~" H 1350 6200 50  0001 C CNN
+	1    1350 6200
+	1    0    0    -1  
+$EndComp
+Text Label 700  5750 0    50   ~ 0
+COM_RELE2
+Text Label 700  6300 0    50   ~ 0
+Q0.1_NA
+Wire Wire Line
+	700  5750 1150 5750
+Wire Wire Line
+	700  6300 1150 6300
+Text Label 700  6100 0    50   ~ 0
+Q0.2_NA
+Wire Wire Line
+	700  6200 1150 6200
+Text Label 700  6200 0    50   ~ 0
+COM_RELE3
+Wire Wire Line
+	700  6100 1150 6100
+$Comp
+L Connector:Screw_Terminal_01x03 J4
+U 1 1 6159340C
+P 3450 5900
+AR Path="/61294493/6159340C" Ref="J4"  Part="1" 
+AR Path="/615E1DF0/6159340C" Ref="J?"  Part="1" 
+F 0 "J4" H 3530 5942 50  0000 L CNN
+F 1 "Terminales Triacs" H 3530 5851 50  0000 L CNN
+F 2 "BorneraTornillos:TerminalBlock_Phoenix_PT-1,5-3-5.0-H_1x03_P5.00mm_Horizontal" H 3450 5900 50  0001 C CNN
+F 3 "~" H 3450 5900 50  0001 C CNN
+	1    3450 5900
+	1    0    0    -1  
+$EndComp
+Text Label 2800 6000 0    50   ~ 0
+COM_TRIAC
+Wire Wire Line
+	2800 6000 3250 6000
+Text Label 2800 5900 0    50   ~ 0
+Q0.3_NA
+Wire Wire Line
+	2800 5900 3250 5900
+$Comp
+L Connector:Screw_Terminal_01x03 J5
+U 1 1 6159E43E
+P 3450 6250
+AR Path="/61294493/6159E43E" Ref="J5"  Part="1" 
+AR Path="/615E1DF0/6159E43E" Ref="J?"  Part="1" 
+F 0 "J5" H 3530 6292 50  0000 L CNN
+F 1 "Terminales Triacs" H 3530 6201 50  0000 L CNN
+F 2 "BorneraTornillos:TerminalBlock_Phoenix_PT-1,5-3-5.0-H_1x03_P5.00mm_Horizontal" H 3450 6250 50  0001 C CNN
+F 3 "~" H 3450 6250 50  0001 C CNN
+	1    3450 6250
+	1    0    0    -1  
+$EndComp
+Text Label 2800 5800 0    50   ~ 0
+Q0.4_NA
+Wire Wire Line
+	2800 5800 3250 5800
+Text Label 2800 6350 0    50   ~ 0
+Q0.5_NA
+Wire Wire Line
+	2800 6350 3250 6350
+Text Label 2800 6250 0    50   ~ 0
+Q0.6_NA
+Wire Wire Line
+	2800 6250 3250 6250
+Text Label 2800 6150 0    50   ~ 0
+Q0.7_NA
+Wire Wire Line
+	2800 6150 3250 6150
+Wire Notes Line
+	500  5450 4500 5450
+Wire Notes Line
+	4500 5450 4500 6500
+Wire Notes Line
+	4500 6500 500  6500
+Wire Notes Line
+	500  6500 500  5450
+Text Notes 500  5550 0    50   ~ 0
+TERMINALES SALIDAS 220VAC/24VDC
+Text HLabel 750  1700 0    50   Input ~ 0
+Q0.0
+Text HLabel 750  4000 0    50   Input ~ 0
+Q0.1
+Text HLabel 3200 1700 0    50   Input ~ 0
+Q0.2
+Text HLabel 5650 2400 0    50   Input ~ 0
+Q0.3
+Text HLabel 5650 3800 0    50   Input ~ 0
+Q0.4
+Text HLabel 7700 2400 0    50   Input ~ 0
+Q0.5
+Text HLabel 7700 3800 0    50   Input ~ 0
+Q0.6
+Text HLabel 5650 850  0    50   Input ~ 0
+Q0.7
+Text Notes 500  600  0    50   ~ 0
+Salidas Digitales
+Text Notes 1850 2550 0    50   ~ 0
+hfe=35 (min)\nIc (max) = 0.8A
+Text Notes 1400 850  0    50   ~ 0
+Rrele= 70 ohm
+$Comp
+L power:PWR_FLAG #FLG0104
+U 1 1 62398517
+P 2400 800
+F 0 "#FLG0104" H 2400 875 50  0001 C CNN
+F 1 "PWR_FLAG" H 2400 973 50  0000 C CNN
+F 2 "" H 2400 800 50  0001 C CNN
+F 3 "~" H 2400 800 50  0001 C CNN
+	1    2400 800 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 800  2400 900 
+Wire Wire Line
+	2400 900  2100 900 
+$Comp
+L Transistor_BJT:2N2219 Q3
+U 1 1 6154F61B
+P 2000 1900
+F 0 "Q3" H 2190 1946 50  0000 L CNN
+F 1 "2N2219" H 2190 1855 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 2200 1825 50  0001 L CIN
+F 3 "http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF" H 2000 1900 50  0001 L CNN
+	1    2000 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:2N2219 Q5
+U 1 1 61550A00
+P 4450 1900
+F 0 "Q5" H 4640 1946 50  0000 L CNN
+F 1 "2N2219" H 4640 1855 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4650 1825 50  0001 L CIN
+F 3 "http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF" H 4450 1900 50  0001 L CNN
+	1    4450 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:2N2219 Q4
+U 1 1 6155197A
+P 2100 4200
+F 0 "Q4" H 2290 4246 50  0000 L CNN
+F 1 "2N2219" H 2290 4155 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 2300 4125 50  0001 L CIN
+F 3 "http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF" H 2100 4200 50  0001 L CNN
+	1    2100 4200
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
